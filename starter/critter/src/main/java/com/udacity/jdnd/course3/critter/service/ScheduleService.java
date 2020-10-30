@@ -1,7 +1,10 @@
-package com.udacity.jdnd.course3.critter.schedule;
+package com.udacity.jdnd.course3.critter.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.udacity.jdnd.course3.critter.model.Schedule;
+import com.udacity.jdnd.course3.critter.repository.ScheduleRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;

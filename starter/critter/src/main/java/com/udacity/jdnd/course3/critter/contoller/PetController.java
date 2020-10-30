@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.pet;
+package com.udacity.jdnd.course3.critter.contoller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.udacity.jdnd.course3.critter.user.Customer;
-import com.udacity.jdnd.course3.critter.user.CustomerService;
+import com.udacity.jdnd.course3.critter.dto.PetDTO;
+import com.udacity.jdnd.course3.critter.model.Customer;
+import com.udacity.jdnd.course3.critter.model.Pet;
+import com.udacity.jdnd.course3.critter.service.CustomerService;
+import com.udacity.jdnd.course3.critter.service.PetService;
 
 /**
  * Handles web requests related to Pets.

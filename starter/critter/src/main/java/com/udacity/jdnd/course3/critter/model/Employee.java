@@ -1,9 +1,9 @@
-package com.udacity.jdnd.course3.critter.user;
+package com.udacity.jdnd.course3.critter.model;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Nationalized;
 
-import com.udacity.jdnd.course3.critter.schedule.Schedule;
+import com.udacity.jdnd.course3.critter.dto.EmployeeSkill;
 
 import javax.persistence.*;
 import java.time.DayOfWeek;

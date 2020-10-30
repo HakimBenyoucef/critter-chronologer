@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.schedule;
+package com.udacity.jdnd.course3.critter.contoller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,11 +14,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.udacity.jdnd.course3.critter.pet.Pet;
-import com.udacity.jdnd.course3.critter.pet.PetService;
-import com.udacity.jdnd.course3.critter.user.CustomerService;
-import com.udacity.jdnd.course3.critter.user.Employee;
-import com.udacity.jdnd.course3.critter.user.EmployeeService;
+import com.udacity.jdnd.course3.critter.dto.ScheduleDTO;
+import com.udacity.jdnd.course3.critter.model.Employee;
+import com.udacity.jdnd.course3.critter.model.Pet;
+import com.udacity.jdnd.course3.critter.model.Schedule;
+import com.udacity.jdnd.course3.critter.service.CustomerService;
+import com.udacity.jdnd.course3.critter.service.EmployeeService;
+import com.udacity.jdnd.course3.critter.service.PetService;
+import com.udacity.jdnd.course3.critter.service.ScheduleService;
 
 /**
  * Handles web requests related to Schedules.

@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.user;
+package com.udacity.jdnd.course3.critter.service;
 
 import java.time.DayOfWeek;
 import java.util.ArrayList;
@@ -10,7 +10,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.udacity.jdnd.course3.critter.dto.EmployeeSkill;
 import com.udacity.jdnd.course3.critter.exception.ResourceNotFoundException;
+import com.udacity.jdnd.course3.critter.model.Employee;
+import com.udacity.jdnd.course3.critter.repository.EmployeeRepository;
 
 @Service
 @Transactional

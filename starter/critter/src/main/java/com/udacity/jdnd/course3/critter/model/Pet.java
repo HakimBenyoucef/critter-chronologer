@@ -1,13 +1,21 @@
-package com.udacity.jdnd.course3.critter.pet;
+package com.udacity.jdnd.course3.critter.model;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Nationalized;
 
-import com.udacity.jdnd.course3.critter.schedule.Schedule;
-import com.udacity.jdnd.course3.critter.user.Customer;
-
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.List;
+import com.udacity.jdnd.course3.critter.dto.PetType;
 
 @Entity
 public class Pet {

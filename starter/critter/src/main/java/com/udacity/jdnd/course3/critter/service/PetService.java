@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.pet;
+package com.udacity.jdnd.course3.critter.service;
 
 import java.util.List;
 
@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.udacity.jdnd.course3.critter.exception.ResourceNotFoundException;
+import com.udacity.jdnd.course3.critter.model.Pet;
+import com.udacity.jdnd.course3.critter.repository.PetRepository;
 
 @Service
 @Transactional

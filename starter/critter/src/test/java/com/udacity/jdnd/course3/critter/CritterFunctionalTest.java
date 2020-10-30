@@ -1,25 +1,30 @@
 package com.udacity.jdnd.course3.critter;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-import com.udacity.jdnd.course3.critter.pet.PetController;
-import com.udacity.jdnd.course3.critter.pet.PetDTO;
-import com.udacity.jdnd.course3.critter.pet.PetType;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleController;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleDTO;
-import com.udacity.jdnd.course3.critter.user.*;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+import com.udacity.jdnd.course3.critter.contoller.PetController;
+import com.udacity.jdnd.course3.critter.contoller.ScheduleController;
+import com.udacity.jdnd.course3.critter.contoller.UserController;
+import com.udacity.jdnd.course3.critter.dto.CustomerDTO;
+import com.udacity.jdnd.course3.critter.dto.EmployeeDTO;
+import com.udacity.jdnd.course3.critter.dto.EmployeeRequestDTO;
+import com.udacity.jdnd.course3.critter.dto.EmployeeSkill;
+import com.udacity.jdnd.course3.critter.dto.PetDTO;
+import com.udacity.jdnd.course3.critter.dto.PetType;
+import com.udacity.jdnd.course3.critter.dto.ScheduleDTO;
 
 /**
  * This is a set of functional tests to validate the basic capabilities desired for this application.
@@ -97,7 +102,7 @@ public class CritterFunctionalTest {
         PetDTO newPet = petController.savePet(petDTO);
         petDTO.setType(PetType.DOG);
         petDTO.setName("DogName");
-        PetDTO newPet2 = petController.savePet(petDTO);
+        petController.savePet(petDTO);
 
         List<PetDTO> pets = petController.getPetsByOwner(newCustomer.getId());
         Assertions.assertEquals(pets.size(), 2);
@@ -259,13 +264,6 @@ public class CritterFunctionalTest {
         petDTO.setName("TestPet");
         petDTO.setType(PetType.CAT);
         return petDTO;
-    }
-
-    private static EmployeeRequestDTO createEmployeeRequestDTO() {
-        EmployeeRequestDTO employeeRequestDTO = new EmployeeRequestDTO();
-        employeeRequestDTO.setDate(LocalDate.of(2019, 12, 25));
-        employeeRequestDTO.setSkills(Sets.newHashSet(EmployeeSkill.FEEDING, EmployeeSkill.WALKING));
-        return employeeRequestDTO;
     }
 
     private static ScheduleDTO createScheduleDTO(List<Long> petIds, List<Long> employeeIds, LocalDate date, Set<EmployeeSkill> activities) {

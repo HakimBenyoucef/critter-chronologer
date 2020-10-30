@@ -1,15 +1,24 @@
-package com.udacity.jdnd.course3.critter.schedule;
+package com.udacity.jdnd.course3.critter.model;
 
-import org.hibernate.annotations.Cascade;
-
-import com.udacity.jdnd.course3.critter.pet.Pet;
-import com.udacity.jdnd.course3.critter.user.Employee;
-import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
-
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import org.hibernate.annotations.Cascade;
+
+import com.udacity.jdnd.course3.critter.dto.EmployeeSkill;
 
 @Entity
 public class Schedule {

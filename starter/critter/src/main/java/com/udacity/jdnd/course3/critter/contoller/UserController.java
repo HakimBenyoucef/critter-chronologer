@@ -1,4 +1,4 @@
-package com.udacity.jdnd.course3.critter.user;
+package com.udacity.jdnd.course3.critter.contoller;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -15,7 +15,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.udacity.jdnd.course3.critter.pet.PetService;
+import com.udacity.jdnd.course3.critter.dto.CustomerDTO;
+import com.udacity.jdnd.course3.critter.dto.EmployeeDTO;
+import com.udacity.jdnd.course3.critter.dto.EmployeeRequestDTO;
+import com.udacity.jdnd.course3.critter.model.Customer;
+import com.udacity.jdnd.course3.critter.model.Employee;
+import com.udacity.jdnd.course3.critter.service.CustomerService;
+import com.udacity.jdnd.course3.critter.service.EmployeeService;
+import com.udacity.jdnd.course3.critter.service.PetService;
 
 /**
  * Handles web requests related to Users.

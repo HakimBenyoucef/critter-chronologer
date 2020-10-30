@@ -1,11 +1,16 @@
-package com.udacity.jdnd.course3.critter.user;
+package com.udacity.jdnd.course3.critter.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Nationalized;
-
-import com.udacity.jdnd.course3.critter.pet.Pet;
-
-import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Customer {
